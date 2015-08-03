@@ -1,17 +1,17 @@
-(function(){
+(function() {
 	'use strict';
-	
+
 	angular.module('app.tweets').factory('SidebarModel', Model);
 
-	function Model(){
+	function Model() {
 		return SidebarModel;
 
-		function SidebarModel(sharedModel){
+		function SidebarModel(sharedModel) {
 			this.tweets = sharedModel.tweets;
 			this.toggleCollapsed = toggleCollapsed;
 
-			function toggleCollapsed(){
-
+			function toggleCollapsed() {
+				sharedModel.sidebarCollapsed = !sharedModel.sidebarCollapsed;
 			}
 		}
 	}

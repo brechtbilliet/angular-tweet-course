@@ -1,9 +1,12 @@
-<div ng-class="{'sidebar-collapsed': false}">
+<div ng-class="{'sidebar-collapsed': tweetSidebarVm.sharedModel.sidebarCollapsed}">
 	<div>
-		<i class="fa dp-collapse dp-collapse-right" ng-class="{'fa-chevron-left': true, 'fa-chevron-right': false}"></i>
+		<i ng-click="tweetSidebarVm.toggleCollapsed()" class="fa dp-collapse dp-collapse-right" ng-class="{'fa-chevron-left': !tweetSidebarVm.sharedModel.sidebarCollapsed, 'fa-chevron-right': tweetSidebarVm.sharedModel.sidebarCollapsed}"></i>
 		<div class="collapsed-content">
 			<h2>Starred tweets</h2>
 			<p>Here we have an overview of our starred tweets</p>
+			<div ng-repeat="tweet in tweetSidebarVm.model.tweets" ng-if="tweet.isStarred">
+				{{::tweet.user}} has tweeted {{::tweet.content}}
+			</div>
 		</div>
 	</div>
 </div>

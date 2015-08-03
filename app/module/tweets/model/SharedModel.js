@@ -3,11 +3,12 @@
 	
 	angular.module('app.tweets').factory('SharedModel', Model);
 
-	function Model(){
+	Model.$inject = ['TweetService'];
+	function Model(TweetService){
 		return SharedModel;
 
 		function SharedModel(){
-			this.tweets = [];
+			this.tweets = TweetService.getAll();
 			this.sidebarCollapsed = false;
 			this.topbarCollapsed = false;
 		}
