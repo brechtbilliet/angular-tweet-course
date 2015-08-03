@@ -5,14 +5,17 @@ body{
 [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
   display: none !important;
 }
-.tweets{
+dp-tweet-index, dp-tweet-sidebar, dp-tweet-content, dp-tweet-main, dp-tweet-topbar{
+	display:block;
+}
+dp-tweet-index{
 	display:flex;
     flex-direction:row;
 	height: 100%;
 	width: 100%;
 	position:absolute;
 }
-.tweets-sidebar{
+dp-tweet-sidebar{
 	width: 30%;
 	background: #fff;
 	height: 100%;
@@ -21,34 +24,34 @@ body{
 	display: flex;
     flex-direction: column;
 }
-.tweets-sidebar.sidebar-collapsed{
+dp-tweet-sidebar.sidebar-collapsed{
 	width: 35px;
 	padding: 0px;
 }
-.tweets-sidebar.sidebar-collapsed .collapsed-content{
+dp-tweet-sidebar.sidebar-collapsed .collapsed-content{
 	display: none;
 }
-.tweets-main{
+dp-tweet-main{
 	background: #f1f1f1;
  	display: flex;
     flex-direction: column;
     flex-grow: 1;
 
 }
-.tweets-topbar{
+dp-tweet-topbar{
 	height: 250px;
 	background: #BFE0EC;
 	padding: 20px;
  	flex-shrink: 0;
 }
-.tweets-topbar.topbar-collapsed{
+dp-tweet-topbar.topbar-collapsed{
 	padding: 0px;
 	height: 35px;
 }
-.tweets-topbar.topbar-collapsed .collapsed-content{
+dp-tweet-topbar.topbar-collapsed .collapsed-content{
 	display: none;
 }
-.tweets-content{
+dp-tweet-content{
 	flex-grow: 1;
 	background: #f1f1f1;
 	overflow-y: auto;
