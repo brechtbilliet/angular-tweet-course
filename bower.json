@@ -1,0 +1,19 @@
+{
+  "name": "customerApp",
+  "version": "1.0.0",
+  "homepage": "/",
+  "description": "This is a customer application to maintain customers and add projects to them",
+  "main": "/",
+  "authors": [
+    "Brecht Billiet"
+  ],
+  "license": "/",
+  "dependencies": {
+    "angular": "~1.3.14",
+    "angular-route": "~1.3.14",
+    "angular-mocks": "~1.3.14",
+    "bootstrap": "~3.3.2",
+    "lodash": "~3.5.0",
+    "fontawesome": "~4.3.0"
+  }
+}
